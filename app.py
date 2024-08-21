@@ -8,9 +8,9 @@ app.secret_key = '#Ironman2003'
 
 # MySQL Database Connection
 db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="#Ironman2003",
+    host="10.160.253.26",
+    user="flask_user",
+    password="password123",
     database="exam_portal"
 )
 cursor = db.cursor()

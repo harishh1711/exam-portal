@@ -1,34 +1,157 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Available Exams</title>
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/view_exams.css') }}"
+    />
+    <script
+      src="{{ url_for('static', filename='js/view_exams.js') }}"
+      defer
+    ></script>
+  </head>
+  <body>
     <h2>Available Exams</h2>
-    <table border="1">
-        <tr>
+    <div class="search-container">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search exams..."
+        onkeyup="searchFunction()"
+      />
+    </div>
+    <div class="table-container">
+      <table id="examsTable">
+        <thead>
+          <tr>
             <th>Exam Name</th>
             <th>Registration starts</th>
             <th>Registration ends</th>
             <th>Exam Date</th>
             <th>Action</th>
-        </tr>
-        {% for exam in exams %}
-        <tr>
+          </tr>
+        </thead>
+        <tbody>
+          {% for exam in exams %}
+          <tr>
             <td>{{ exam[1] }}</td>
             <td>{{ exam[2] }}</td>
             <td>{{ exam[3] }}</td>
             <td>{{ exam[4] }}</td>
-
             <td>
-                <form action="{{ url_for('enter_details') }}" method="post">
-                    <input type="hidden" name="exam_id" value="{{ exam[0] }}">
-                    <button type="submit">Register</button>
-                </form>
+              <form action="{{ url_for('enter_details') }}" method="post">
+                <input type="hidden" name="exam_id" value="{{ exam[0] }}" />
+                <button type="submit">Register</button>
+              </form>
             </td>
-        </tr>
-        {% endfor %}
-    </table>
+          </tr>
+          <tr>
+            <td>{{ exam[1] }}</td>
+            <td>{{ exam[2] }}</td>
+            <td>{{ exam[3] }}</td>
+            <td>{{ exam[4] }}</td>
+            <td>
+              <form action="{{ url_for('enter_details') }}" method="post">
+                <input type="hidden" name="exam_id" value="{{ exam[0] }}" />
+                <button type="submit">Register</button>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>{{ exam[1] }}</td>
+            <td>{{ exam[2] }}</td>
+            <td>{{ exam[3] }}</td>
+            <td>{{ exam[4] }}</td>
+            <td>
+              <form action="{{ url_for('enter_details') }}" method="post">
+                <input type="hidden" name="exam_id" value="{{ exam[0] }}" />
+                <button type="submit">Register</button>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>{{ exam[1] }}</td>
+            <td>{{ exam[2] }}</td>
+            <td>{{ exam[3] }}</td>
+            <td>{{ exam[4] }}</td>
+            <td>
+              <form action="{{ url_for('enter_details') }}" method="post">
+                <input type="hidden" name="exam_id" value="{{ exam[0] }}" />
+                <button type="submit">Register</button>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>{{ exam[1] }}</td>
+            <td>{{ exam[2] }}</td>
+            <td>{{ exam[3] }}</td>
+            <td>{{ exam[4] }}</td>
+            <td>
+              <form action="{{ url_for('enter_details') }}" method="post">
+                <input type="hidden" name="exam_id" value="{{ exam[0] }}" />
+                <button type="submit">Register</button>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>{{ exam[1] }}</td>
+            <td>{{ exam[2] }}</td>
+            <td>{{ exam[3] }}</td>
+            <td>{{ exam[4] }}</td>
+            <td>
+              <form action="{{ url_for('enter_details') }}" method="post">
+                <input type="hidden" name="exam_id" value="{{ exam[0] }}" />
+                <button type="submit">Register</button>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>{{ exam[1] }}</td>
+            <td>{{ exam[2] }}</td>
+            <td>{{ exam[3] }}</td>
+            <td>{{ exam[4] }}</td>
+            <td>
+              <form action="{{ url_for('enter_details') }}" method="post">
+                <input type="hidden" name="exam_id" value="{{ exam[0] }}" />
+                <button type="submit">Register</button>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>{{ exam[1] }}</td>
+            <td>{{ exam[2] }}</td>
+            <td>{{ exam[3] }}</td>
+            <td>{{ exam[4] }}</td>
+            <td>
+              <form action="{{ url_for('enter_details') }}" method="post">
+                <input type="hidden" name="exam_id" value="{{ exam[0] }}" />
+                <button type="submit">Register</button>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>{{ exam[1] }}</td>
+            <td>{{ exam[2] }}</td>
+            <td>{{ exam[3] }}</td>
+            <td>{{ exam[4] }}</td>
+            <td>
+              <form action="{{ url_for('enter_details') }}" method="post">
+                <input type="hidden" name="exam_id" value="{{ exam[0] }}" />
+                <button type="submit">Register</button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="pagination-container">
+      <button class="pagination-button" onclick="prevPage()">Previous</button>
+      <span id="pageNumber">Page 1</span>
+      <button class="pagination-button" onclick="nextPage()">Next</button>
+    </div>
     <a href="{{ url_for('student_dashboard') }}">Back to Dashboard</a>
-</body>
+  </body>
 </html>

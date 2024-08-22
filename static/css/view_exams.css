@@ -1,0 +1,131 @@
+/* styles.css */
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 80%; /* Reduce the width of the table */
+    max-width: 1000px; /* Optional: set a maximum width */
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-right: 1px solid #dee2e6; /* Add column line */
+}
+
+th:last-child, td:last-child {
+    border-right: none; /* Remove border from the last column */
+}
+
+th {
+    background-color: #6ecae1; /* Change background color for headers */
+    color: #ffffff; /* Change text color for headers */
+    font-weight: bold;
+    border-bottom: 2px solid #dee2e6; /* Add bottom border to headers */
+    text-transform: uppercase; /* Capitalize header text */
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #f1f3f5;
+}
+
+button {
+    background-color: #259425; /* Blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover {
+    background-color: #26c14a;
+    transform: translateY(-1px);
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.pagination-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination-button {
+    background-color: #6ecae1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.pagination-button:hover {
+    background-color: #5db5c6;
+    transform: translateY(-1px);
+}
+
+#pageNumber {
+    font-size: 16px;
+    margin: 0 10px;
+}

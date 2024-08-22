@@ -1,47 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Enter Details</title>
-</head>
-<body>
-    <h2>Enter Your Details</h2>
-    <form method="POST" action="{{ url_for('register_exam', exam_id=exam_id) }}" enctype="multipart/form-data">
-        <div class="form-row">
+  </head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{ url_for('static', filename='css/enter_details.css') }}"
+  />
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <form
+          method="POST"
+          action="/enter_details"
+          enctype="multipart/form-data"
+        >
+          <h1>Enter Your Details</h1>
+          <div class="form-row">
             <label for="name">Name:</label>
-            <input type="text" name="name" required>
+            <input type="text" name="name" required />
             <label for="dob">Date of Birth:</label>
-            <input type="date" name="dob" required class="date-input">
-        </div>
-        <div class="form-row select-row">
+            <input type="date" name="dob" required class="date-input" />
+          </div>
+          <div class="form-row select-row">
             <label for="gender">Gender:</label>
             <select name="gender" required>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Other">Other</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
             </select>
             <label for="phone">Phone Number:</label>
-            <input type="text" name="phone" required>
-        </div>
-        <div class="form-email">
+            <input type="text" name="phone" required />
+          </div>
+          <div class="form-email">
             <label for="email">Email:</label>
-            <input type="email" name="email" required>
-        </div>
-        <label for="address">Address:</label>
-        <textarea name="address" required></textarea>
-        <div class="form-row">
+            <input type="email" name="email" required />
+          </div>
+          <label for="address">Address:</label>
+          <textarea name="address" required></textarea>
+          <div class="form-row">
             <label for="aadhar_number">Aadhar Number:</label>
-            <input type="text" name="aadhar_number" required>
+            <input type="text" name="aadhar_number" required />
             <label for="aadhar_image">Upload Aadhar Image:</label>
-            <input type="file" name="aadhar_image" accept=".jpg, .jpeg, .png" required>
-        </div>
-        <div class="form-row">
+            <input
+              type="file"
+              name="aadhar_image"
+              accept=".jpg, .jpeg, .png"
+              required
+            />
+          </div>
+
+          <div class="form-row">
             <label for="photo">Upload Photo:</label>
-            <input type="file" name="photo" accept=".jpg, .jpeg, .png" required>
+            <input
+              type="file"
+              name="photo"
+              accept=".jpg, .jpeg, .png"
+              required
+            />
             <label for="signature">Upload Signature:</label>
-            <input type="file" name="signature" accept=".jpg, .jpeg, .png" required>
-        </div>
-        <button type="submit">Submit</button>
-    </form>
-    
-</body>
+            <input
+              type="file"
+              name="signature"
+              accept=".jpg, .jpeg, .png"
+              required
+            />
+          </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

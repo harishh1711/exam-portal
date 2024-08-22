@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Manage Exams</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/manage_exam.css') }}"
+    />
+  </head>
+  <body>
+    <h2>Manage Exams</h2>
+    <table>
+      <tr>
+        <th>Exam Name</th>
+        <th>Registration Starts</th>
+        <th>Registration Ends</th>
+        <th>Exam Date</th>
+        <th>Update</th>
+        <th>Remove</th>
+        <th>View Students</th>
+      </tr>
+      {% for exam in exams %}
+      <tr>
+        <td>{{ exam[1] }}</td>
+        <td>{{ exam[2] }}</td>
+        <td>{{ exam[3] }}</td>
+        <td>{{ exam[4] }}</td>
+        <td>
+          <form
+            action="{{ url_for('update_exam', exam_id=exam[0]) }}"
+            method="get"
+          >
+            <input type="submit" value="Update" />
+          </form>
+        </td>
+        <td>
+          <form
+            action="{{ url_for('delete_exam', exam_id=exam[0]) }}"
+            method="post"
+          >
+            <input type="submit" value="Remove" />
+          </form>
+        </td>
+        <td>
+          <form
+            action="{{ url_for('view_registered_students', exam_id=exam[0]) }}"
+            method="get"
+          >
+            <input type="submit" value="View Students" />
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+    <a href="{{ url_for('admin_dashboard') }}">Back to Dashboard</a>
+  </body>
+</html>

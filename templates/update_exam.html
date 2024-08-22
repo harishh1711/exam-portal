@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Exam</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/update_exam.css') }}"
+    />
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Update Exam: {{ exam[1] }}</h2>
+      <form method="POST">
+        <label for="registration_start">Registration Starts:</label>
+        <input
+          type="date"
+          id="registration_start"
+          name="registration_start"
+          value="{{ exam[2] }}"
+          required
+        />
+
+        <label for="registration_end">Registration Ends:</label>
+        <input
+          type="date"
+          id="registration_end"
+          name="registration_end"
+          value="{{ exam[3] }}"
+          required
+        />
+
+        <label for="exam_date">Exam Date:</label>
+        <input
+          type="date"
+          id="exam_date"
+          name="exam_date"
+          value="{{ exam[4] }}"
+          required
+        />
+
+        <button type="submit">Update</button>
+      </form>
+    </div>
+
+    <div class="link-container">
+      <a href="{{ url_for('manage_exams') }}">Back to Manage Exams</a>
+    </div>
+  </body>
+</html>

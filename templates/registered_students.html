@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registered Students</title>
+</head>
+<body>
+    <h2>Students Registered for the Exam</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Aadhar Number</th>
+            <th>Photo</th>
+            <th>Signature</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+            <td>{{ student['student_id'] }}</td>
+            <td>{{ student['name'] }}</td>
+            <td>{{ student['dob'] }}</td>
+            <td>{{ student['gender'] }}</td>
+            <td>{{ student['phone'] }}</td>
+            <td>{{ student['email'] }}</td>
+            <td>{{ student['address'] }}</td>
+            <td>{{ student['aadhar_number'] }}</td>
+            <td><img src="data:image/jpeg;base64,{{ student['photo'] | b64encode }}" alt="Photo"></td>
+            <td><img src="data:image/jpeg;base64,{{ student['signature'] | b64encode }}" alt="Signature"></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('manage_exams') }}">Back to Manage Exams</a>
+</body>
+</html>

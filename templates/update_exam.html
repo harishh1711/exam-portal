@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Exam</title>
+</head>
+<body>
+    <h2>Update Exam: {{ exam[1] }}</h2>
+    <form method="POST">
+        <label for="registration_start">Registration Starts:</label>
+        <input type="date" id="registration_start" name="registration_start" value="{{ exam[2] }}" required><br>
+        <label for="registration_end">Registration Ends:</label>
+        <input type="date" id="registration_end" name="registration_end" value="{{ exam[3] }}" required><br>
+        <label for="exam_date">Exam Date:</label>
+        <input type="date" id="exam_date" name="exam_date" value="{{ exam[4] }}" required><br>
+        <button type="submit">Update</button>
+    </form>
+    <a href="{{ url_for('manage_exams') }}">Back to Manage Exams</a>
+</body>
+</html>

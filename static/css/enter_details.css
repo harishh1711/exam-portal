@@ -1,0 +1,149 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 70%;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 60px;
+    border: 1px solid #ddd;
+    position: relative;
+    top: -8px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea,
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333333;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    border-color: #000000;
+   
+    outline: none;
+}
+
+.form-container .form-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.form-container .form-row input {
+    width: calc(50% - 10px);
+}
+
+.form-container button[type="submit"] {
+    /* Decreased the button width */
+    margin-top: 30px; /* Increased the space above the button */
+    background-color: #6ecae1;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #5db5c6;
+    box-shadow: 0 4px 10px rgba(110, 202, 225, 0.3);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+
+
+.text-change {
+    font-family: 'Goldman', monospace;
+    font-size: 15px;
+    color: #333333;
+}
+
+.dud {
+    color: hsl(204, 100%, 59%);
+    filter: drop-shadow(0 0 0.5em #2fd0d8);
+}
+
+.date-input {
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    padding: 12px; /* Space inside the input */
+}
+
+.date-input:focus {
+    border-color: #000000; /* Border color when focused */
+    background-color: #ffffff; /* Background color when focused */
+}
+
+
+.go-back-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.go-back-button a {
+    padding: 10px 20px;
+    background-color: hsl(0, 0%, 0%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.go-back-button a:hover {
+    background-color: hsl(0, 0%, 0%);
+    transform: translateY(-2px);
+}
+
+option {
+    color: #000000;
+}
+.form-row select {
+    width: 200px; /* Adjust the width as needed */
+}

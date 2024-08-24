@@ -49,7 +49,7 @@ input[type="password"] {
 button {
   width: 100%;
   padding: 10px;
-  background-color: #6ecae1;
+  background-color: #27a4c4;
   color: white;
   border: none;
   border-radius: 5px;
@@ -71,7 +71,7 @@ button:hover {
 }
 
 .register-link a {
-  color: #6ecae1;
+  color: #27a4c4;
   text-decoration: none;
 }
 

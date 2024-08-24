@@ -36,7 +36,6 @@ label {
     text-align: left;
 }
 
-input[type="text"],
 input[type="date"] {
     width: 100%;
     padding: 10px;
@@ -46,7 +45,7 @@ input[type="date"] {
     box-sizing: border-box;
 }
 
-input[type="submit"] {
+button[type="submit"] {
     width: 100%;
     padding: 10px;
     background-color: #27a4c4;
@@ -58,9 +57,8 @@ input[type="submit"] {
     font-family: 'Times New Roman', Times, serif;
 }
 
-input[type="submit"]:hover {
+button[type="submit"]:hover {
     background-color: #87CEEB;
-    
 }
 
 .link-container {
